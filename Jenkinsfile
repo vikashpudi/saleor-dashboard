@@ -9,7 +9,9 @@ pipeline {
         stage('buildng') {
              steps {
                  sh '''
-                 docker image build -t pudivikash/github:v1 .
+                 docker image build -t pudivikash/pudivikash:tagname .
+                docker push pudivikash/pudivikash:tagname
+
                  '''
             }
         }
